@@ -2,22 +2,60 @@
 /// LOGO
 .logo {
     height: 3.25rem;
+    margin-left: 3rem;
 }
 
 /////////////////////////////
 /// SEARCH
 .search {
-    &__input {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    &__input {
+        background-color: var(--color-grey-light-2);
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        border: none;
+        border-radius: 10rem;
+        padding: .7rem 2rem;
+        // margin-right: -3.25rem;
+        width: 90%;
+        transition: all .3s ease-in-out;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
     }
 
     &__button {
-        
+        border: none;
+        background-color: transparent;
+        margin-left: -3.25rem;
+
+        &:focus {
+            background-color: transparent;
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
     }
 
     &__icon {
         height: 2rem;
         width: 2rem;
+        fill: var(--color-grey-dark-3);
     }
 }
 
