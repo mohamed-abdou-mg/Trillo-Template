@@ -52,7 +52,6 @@ body {
 .container {
   margin: 8rem auto;
   max-width: 120rem;
-  min-height: 50rem;
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark); }
 
@@ -70,11 +69,15 @@ body {
 
 .sidebar {
   flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--color-grey-dark-1); }
 
 .hotel-view {
   flex: 1;
-  background-color: orangered; }
+  background-color: orangered;
+  height: 80rem; }
 
 .logo {
   height: 3.25rem;
@@ -150,3 +153,13 @@ body {
     height: 3.75rem;
     border-radius: 50%;
     margin-right: 1rem; }
+
+.side-nav__icon {
+  width: 1.75rem;
+  height: 1.75rem; }
+
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--color-grey-light-4);
+  padding: 2.5rem; }
