@@ -110,7 +110,6 @@
     }
 }
 
-
 /////////////////////////////
 /// SIDE NAV
 .side-nav {
@@ -118,9 +117,20 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+        display: flex;
+    }
+
     &__item {
         position: relative;
         margin-bottom: .5rem;
+        @media only screen and (max-width: $bp-medium) {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            margin-bottom: 0;
+        }
     }
 
     &__item::before {
@@ -168,7 +178,6 @@
     }
 }
 
-
 /////////////////////////////
 /// LEGAL
 .legal {
@@ -176,8 +185,11 @@
     text-align: center;
     color: var(--color-grey-light-4);
     padding: 2.5rem;
-}
 
+    @media only screen and (max-width: $bp-medium) {
+        display: none;        
+    }
+}
 
 /////////////////////////////
 /// GALLERY
@@ -189,7 +201,6 @@
         display: block;
     }
 }
-
 
 /////////////////////////////
 /// OVERVIEW
@@ -284,8 +295,6 @@
     }
 }
 
-
-
 @keyframes pulsate {
     0% {
         transform: scale(1);
@@ -303,7 +312,6 @@
     }
 }
 
-
 //////////////////////////
 /// PARAGRAPH
 .paragraph {
@@ -311,7 +319,6 @@
         margin-bottom: 2rem;
     }
 }
-
 
 //////////////////////////
 /// LIST
@@ -342,7 +349,6 @@
     }
 }
 
-
 //////////////////////////
 /// RECOMMEND
 .recommend {
@@ -356,6 +362,10 @@
         margin-right: auto;
     }
 
+    &__friends {
+        display: flex;
+    }
+
     &__photo {
         height: 4rem;
         width: 4rem;
@@ -364,7 +374,7 @@
         box-sizing: content-box;
 
         &:not(:last-child){
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -382,6 +392,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     &__text {
         position: relative;
@@ -436,14 +452,16 @@
     }
 }
 
-
-
 ///////////////////////////////////////
 /// CALL TO ACTION
 .cta {
     padding: 3.5rem 0;
     text-align: center;
     background-color: #fff;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+    }
 
     &__book-now {
         font-size: 1.5rem;
@@ -464,7 +482,7 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    
+
     & > * {
         display: inline-block;
         height: 100%;
