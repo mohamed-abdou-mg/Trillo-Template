@@ -13,6 +13,12 @@
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
+
     &__input {
         background-color: var(--color-grey-light-2);
         color: inherit;
@@ -168,6 +174,10 @@
         align-items: center;
         position: relative;
         z-index: 10;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
     }
 
     &__icon {
@@ -175,6 +185,13 @@
         height: 1.75rem;
         fill: currentColor;
         margin-right: 2rem;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0;
+            margin-bottom: .7rem;
+        }
     }
 }
 
@@ -216,6 +233,10 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 1.5rem;
+        }
     }
 
     &__stars {
@@ -227,12 +248,21 @@
         width: 1.75rem;
         height: 1.75rem;
         fill: var(--color-primary);
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: 1rem;
+            height: 1rem;
+        }
     }
 
     &__location {
         font-size: 1.2rem;
         display: flex;
         align-items: center;
+        
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: .8rem;
+        }
     }
 
     &__icon-location {
@@ -254,11 +284,19 @@
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 1.5rem;
+        }
     }
 
     &__rating-count {
         font-size: .8rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: .5rem;
+        }
     }
 }
 
