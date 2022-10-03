@@ -1,7 +1,6 @@
 .container {
     margin: 8rem auto;
     max-width: 120rem;
-    // min-height: 50rem;
     background-color: var(--color-grey-light-1);
     box-shadow: var(--shadow-dark);
 }
@@ -10,7 +9,7 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: var(--color-grey-light-2);
+    border-bottom: 1px solid var(--color-grey-light-2);
     display: flex;
     justify-content: space-between;
     align-items: center;
